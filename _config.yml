@@ -3,19 +3,19 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: kira的博客
+title: 从0到1
 subtitle:
 description:
 keywords:
 author: kira
-language:
+language: zh-CN
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://blog.kira.ink
 root: /
-permalink: :category/:year:month:day_:title/
+permalink: posts/:category/:year:month:day-:title/
 permalink_defaults:
 
 # Directory
