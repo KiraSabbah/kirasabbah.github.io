@@ -5,7 +5,7 @@ category:
   - 开发环境
 tags:
   - 开发环境
-  - JDK
+  - IDEA
 abbrlink: 4af858b7
 date: 2019-01-12 16:17:23
 ---
