@@ -12,6 +12,14 @@ date: 2018-12-31 10:03:49
 
 
 
+Maven的安装配置。
+
+> 本文环境
+>
+> 操作系统：Windows 10 64位
+
+<!-- more -->
+
 ### Windows Maven 安装配置
 1. [Maven官网][1]下载对应版本，例如`apache-maven-3.6.0-bin.zip`
 2. 解压至某个目录，例如`D:/maven`

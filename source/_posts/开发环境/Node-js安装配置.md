@@ -10,7 +10,13 @@ abbrlink: e0a75e6f
 date: 2018-12-31 10:07:22
 ---
 
+Node.js的安装配置。
 
+> 本文环境
+>
+> 操作系统：Windows 10 64位
+
+<!-- more -->
 
 1. [下载](https://nodejs.org/en/download/)，建议下载LTS版本
 2. 安装程序，建议勾选**Add to PATH**，新版本中已经默认勾选

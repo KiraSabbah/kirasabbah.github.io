@@ -12,6 +12,14 @@ date: 2018-12-31 10:07:40
 
 
 
+Mysql的安装配置
+
+> 本文环境
+>
+> 操作系统：Windows 10 64位
+
+<!-- more -->
+
 ## Windows MySql安装配置（压缩包解压配置）
 
 1. [MySql官网](https://dev.mysql.com/downloads/mysql/)下载对应版本的MySQL
