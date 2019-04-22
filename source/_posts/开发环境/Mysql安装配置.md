@@ -53,6 +53,8 @@ Mysql的安装配置
    basedir=D:/mysql-8.0.15-winx64
    #数据库目录
    datadir=D:/mysql-8.0.15-winx64/data
+   #设置默认时区,不设置默认使用系统时区。在默认时区下我用HiKariCP连接时报错
+   default-time-zone=+8:00
    ```
 
 5. 启动/停止mysql，cd至mysql的bin目录下，执行以下命令启动/停止：
