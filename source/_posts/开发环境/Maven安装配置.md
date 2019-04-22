@@ -34,19 +34,13 @@ Maven的安装配置。
 5. 建议添加阿里云maven仓库镜像，在`settings.xml`的**mirrors**节点中添加以下mirror：
 
    ```xml
-   <!--<mirror>
-     <id>alimaven</id>
-     <mirrorOf>central</mirrorOf>
-     <name>aliyun maven</name>
-     <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
-   </mirror>-->
-   <!--据说上面的仓库是旧版本，但是还是能使用，换成下面新地址-->
-   <mirror>  
-     <id>nexus-aliyun</id>  
-     <mirrorOf>central</mirrorOf>    
-     <name>Nexus aliyun</name>  
-     <url>https://maven.aliyun.com/repository/public</url>  
+   <mirror>
+     <id>aliyunmaven</id>
+     <mirrorOf>public</mirrorOf>
+     <name>阿里云公共仓库</name>
+     <url>https://maven.aliyun.com/repository/public</url>
    </mirror>
+   <!--更多仓库见 https://maven.aliyun.com/mvn/view -->
    ```
 
    
