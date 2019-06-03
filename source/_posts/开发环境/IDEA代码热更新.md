@@ -12,12 +12,6 @@ date: 2019-01-12 16:17:23
 
 Intellij IDEA代码的热更新。在写项目时，idea默认是不会自动热更新代码的，要看效果需要重新编译启动。很多人的方案是将idea改为自动编译，然后更新代码，但是这种方案会导致项目不断的重新加载，稍微一点改动甚至换个行就会触发，导致资源浪费电脑卡顿。所以这里使用另一个方案，只有手动触发才重新加载代码，并且是在Debug模式下。
 
-> 本文环境
->
-> 操作系统：Windows 10 64位
->
-> Intellij IDEA：2018.3.3 Ultimate Edition
-
 <!-- more -->
 
 ### JAVA Web项目Tomcat部署热更新
@@ -51,3 +45,11 @@ Intellij IDEA代码的热更新。在写项目时，idea默认是不会自动热
 ### Spring Boot/Spring Cloud项目热更新
 
 设置方法与上面类似，选择对应的`Artifacts`,修改更新操作默认方式，Debug启动即可
+
+
+
+> 本文环境
+>
+> 操作系统：Windows 10 64位
+>
+> Intellij IDEA：2018.3.3 Ultimate Edition

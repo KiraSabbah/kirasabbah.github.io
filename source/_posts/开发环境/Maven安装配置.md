@@ -12,11 +12,7 @@ date: 2018-12-31 10:03:49
 
 
 
-Maven的安装配置。
-
-> 本文环境
->
-> 操作系统：Windows 10 64位
+Window10中Maven的安装配置。
 
 <!-- more -->
 
@@ -43,5 +39,9 @@ Maven的安装配置。
    <!--更多仓库见 https://maven.aliyun.com/mvn/view -->
    ```
 
-   
 
+
+
+> 本文环境
+>
+> 操作系统：Windows 10 64位

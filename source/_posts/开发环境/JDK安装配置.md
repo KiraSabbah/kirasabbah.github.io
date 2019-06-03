@@ -14,13 +14,7 @@ date: 2018-12-31 10:01:13
 
 JDK的安装配置。由于Oracle在JDK8之后商用开始收费，所以这里记录了Oracle JDK和Oracle在[GPL License](https://openjdk.java.net/legal/gplv2+ce.html)协议下的OpenJDK的安装配置。两种版本的配置类似。
 
-> 本文环境
->
-> 操作系统：Windows 10 64位
-
 <!-- more -->
-
-
 
 ### windows JDK 安装配置
 
@@ -38,14 +32,12 @@ JDK的安装配置。由于Oracle在JDK8之后商用开始收费，所以这里�
 
 #### Oracle OpenJDK安装配置
 
-1. 下载JDK：[目前最新版本为11](http://jdk.java.net/11/)，其他版本可查看[jdk.java.net](http://jdk.java.net)
-2. 将下载的Builds（这里下载的是openjdk-11.0.2_windows-x64_bin.zip）解压至目录，例如：`C:\Program Files\Java\jdk-11.0.2`
+1. 下载JDK：[目前最新版本为12](http://jdk.java.net/12/)，其他版本可查看[jdk.java.net](http://jdk.java.net)
+2. 将下载的Builds（这里下载的是openjdk-12.0.1_windows-x64_bin.zip）解压至目录，例如：`C:\Program Files\Java\jdk-12.0.1`
 3. 配置环境变量：
-   * 在系统变量中**新增**变量`JAVA_HOME`，值为：`C:\Program Files\Java\jdk-11.0.2`
+   * 在系统变量中**新增**变量`JAVA_HOME`，值为：`C:\Program Files\Java\jdk-12.0.1`
    * 在系统变量`Path`中添加值:`%JAVA_HOME%\bin`
 4. 安装验证：cmd窗口输入命令`javac -version`或`java -verison`，即可查看相应信息
-
-
 
 
 

@@ -14,14 +14,6 @@ date: 2018-12-31 10:06:56
 
 主流的针对Java的IDE应该就是[Eclipse](https://www.eclipse.org/)和[Intellij IDEA](https://www.jetbrains.com/idea/)了。从接触java开始就一直使用的eclipse，已经用的很顺手，各种快捷键也习惯了。人总是要尝试新事物，所以开始转而使用idea。用了两个月idea，各种智能各种快捷，真香~~~这里记录下安装以及简单配置。
 
-> 本文环境
->
-> 操作系统：Windows 10 64位
->
-> Intellij IDEA：2018.3.3 Ultimate Edition
->
-> JDK：Oracle OpenJDK 11
-
 <!-- more -->
 
 ### 下载安装
@@ -49,3 +41,13 @@ date: 2018-12-31 10:06:56
 `Setting Keymap`进行快捷键修改，可以直接使用eclipse的快键键方案，但是**不推荐**对快键键进行修改，用用就习惯了，习惯了就真香了:joy:
 
 ### 推荐@[judasn](https://github.com/judasn)的详细[IDEA教程](https://github.com/judasn/IntelliJ-IDEA-Tutorial)
+
+
+
+> 本文环境
+>
+> 操作系统：Windows 10 64位
+>
+> Intellij IDEA：2018.3.3 Ultimate Edition
+>
+> JDK：Oracle OpenJDK 11

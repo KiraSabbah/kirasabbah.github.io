@@ -12,15 +12,7 @@ date: 2018-12-31 10:07:40
 
 
 
-Mysql的安装配置
-
-> 本文环境
->
-> 操作系统：Windows 10 64位
->
-> Mysql版本：MySQL Community Server 8.0.15
-
-本文只是简单的安装，详细安装以及高级配置请参考[官方文档](https://dev.mysql.com/doc/)。
+Window10中，Mysql的安装配置。本文只是简单的说明了下压缩包方式的安装，详细安装以及高级配置请参考[官方文档](https://dev.mysql.com/doc/)。更推荐使用Docker安装。
 
 <!-- more -->
 
@@ -105,3 +97,8 @@ Mysql的安装配置
 
    
 
+> 本文环境
+>
+> 操作系统：Windows 10 64位
+>
+> Mysql版本：MySQL Community Server 8.0.15
