@@ -96,25 +96,25 @@
 
 
 
-  <meta name="description" content="购买国外VPS一般用来科学上网，所以一个稳定可靠的VPS至关重要，本文推荐我一直在使用的VPS以及一些基本配置">
-<meta name="keywords" content="科学上网,VPS">
+  <meta name="description" content="Shadowsocks和V2Ray的搭建教程有很多，嫌繁琐也有大神们准备的一键脚本，但是由于系统的各种配置各种环境，有时会出现一些比较头疼的错误。所以这个时候就体现了使用Docker好处了，下载镜像，直接运行。本文介绍使用Docker搭建SS和V2Ray。">
+<meta name="keywords" content="Docker,科学上网,Shadowsocks,V2Ray">
 <meta property="og:type" content="article">
-<meta property="og:title" content="VPS推荐以及一些基本配置">
-<meta property="og:url" content="https://blog.kira.ink/posts/ae129a0b.html">
+<meta property="og:title" content="Docker搭建ss以及V2Ray">
+<meta property="og:url" content="https://blog.kira.ink/posts/dfcd577f.html">
 <meta property="og:site_name" content="一切从简">
-<meta property="og:description" content="购买国外VPS一般用来科学上网，所以一个稳定可靠的VPS至关重要，本文推荐我一直在使用的VPS以及一些基本配置">
+<meta property="og:description" content="Shadowsocks和V2Ray的搭建教程有很多，嫌繁琐也有大神们准备的一键脚本，但是由于系统的各种配置各种环境，有时会出现一些比较头疼的错误。所以这个时候就体现了使用Docker好处了，下载镜像，直接运行。本文介绍使用Docker搭建SS和V2Ray。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-03T15:40:18.332Z">
+<meta property="og:updated_time" content="2019-06-10T14:05:07.448Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="VPS推荐以及一些基本配置">
-<meta name="twitter:description" content="购买国外VPS一般用来科学上网，所以一个稳定可靠的VPS至关重要，本文推荐我一直在使用的VPS以及一些基本配置">
+<meta name="twitter:title" content="Docker搭建ss以及V2Ray">
+<meta name="twitter:description" content="Shadowsocks和V2Ray的搭建教程有很多，嫌繁琐也有大神们准备的一键脚本，但是由于系统的各种配置各种环境，有时会出现一些比较头疼的错误。所以这个时候就体现了使用Docker好处了，下载镜像，直接运行。本文介绍使用Docker搭建SS和V2Ray。">
 
 
 
 
 
 
-  <link rel="canonical" href="https://blog.kira.ink/posts/ae129a0b.html">
+  <link rel="canonical" href="https://blog.kira.ink/posts/dfcd577f.html">
 
 
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>VPS推荐以及一些基本配置 | 一切从简</title>
+  <title>Docker搭建ss以及V2Ray | 一切从简</title>
   
 
 
@@ -293,7 +293,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://blog.kira.ink/posts/ae129a0b.html">
+    <link itemprop="mainEntityOfPage" href="https://blog.kira.ink/posts/dfcd577f.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="kira">
@@ -310,7 +310,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">VPS推荐以及一些基本配置
+          <h1 class="post-title" itemprop="name headline">Docker搭建ss以及V2Ray
 
               
             
@@ -336,7 +336,7 @@
                 
               
 
-              <time title="创建时间：2019-06-02 22:44:03" itemprop="dateCreated datePublished" datetime="2019-06-02T22:44:03+08:00">2019-06-02</time>
+              <time title="创建时间：2019-06-03 23:53:53" itemprop="dateCreated datePublished" datetime="2019-06-03T23:53:53+08:00">2019-06-03</time>
             
 
             
@@ -353,7 +353,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-06-03 23:40:18" itemprop="dateModified" datetime="2019-06-03T23:40:18+08:00">2019-06-03</time>
+                <time title="修改时间：2019-06-10 22:05:07" itemprop="dateModified" datetime="2019-06-10T22:05:07+08:00">2019-06-10</time>
               
             
           </span>
@@ -404,37 +404,51 @@
       
 
       
-        <p>购买国外VPS一般用来科学上网，所以一个稳定可靠的VPS至关重要，本文推荐我一直在使用的VPS以及一些基本配置</p>
+        <p>Shadowsocks和V2Ray的搭建教程有很多，嫌繁琐也有大神们准备的一键脚本，但是由于系统的各种配置各种环境，有时会出现一些比较头疼的错误。所以这个时候就体现了使用Docker好处了，下载镜像，直接运行。本文介绍使用Docker搭建SS和V2Ray。</p>
 <a id="more"></a>
 
-<h3 id="国外VPS推荐"><a href="#国外VPS推荐" class="headerlink" title="国外VPS推荐"></a>国外VPS推荐</h3><p>这里只说下我使用过的几个VPS，其他VPS选择评测可以到<a href="https://www.zhujiceping.com" target="_blank" rel="noopener">国外主机评测</a>看看。选择的时候尽量不要选择openvz的虚拟主机，会有很多限制，关键是不能使用docker，没有docker，那折腾起来真的费劲。</p>
+<h3 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h3><p>一台可以绿坝之外的安装有Docker的VPS。没有VPS，看这里<a href="https://blog.kira.ink/posts/ae129a0b.html">VPS推荐以及一些基本配置</a>；安装Docker看这里<a href="https://blog.kira.ink/posts/7dd83663.html">Docker简单安装配置</a>。</p>
+<h3 id="Docker搭建Shadowsocks服务"><a href="#Docker搭建Shadowsocks服务" class="headerlink" title="Docker搭建Shadowsocks服务"></a>Docker搭建Shadowsocks服务</h3><ol>
+<li><p><a href="https://hub.docker.com" target="_blank" rel="noopener">hub.docker.com</a>，搜索Shadowsocks，这里选择<a href="https://hub.docker.com/r/shadowsocks/shadowsocks-libev" target="_blank" rel="noopener">官方libev</a>，如何使用里面都有详细介绍。</p>
+</li>
+<li><p>下载镜像：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull shadowsocks/shadowsocks-libev</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>启动服务</p>
 <ul>
-<li><a href="https://bwh8.net/" target="_blank" rel="noopener">Bandwagon(搬瓦工)</a>，以前一直使用，但是现在便宜的越来越难买到了。</li>
-<li><a href="http://www.hostmybytes.com" target="_blank" rel="noopener">HostMyBytes</a>，很便宜，很稳定，网络还快，2.5美元一年，但是不久前被<a href="https://www.alpharacks.com" target="_blank" rel="noopener">AlphAracks</a>收购了，我的那台速度就慢慢下来了，但是依旧便宜。</li>
-<li><a href="https://www.vultr.com/?ref=8096009-4F" target="_blank" rel="noopener">Vultr</a>，这里重点推荐，机房多，地点多，而且按小时付费，IP被封或者想换机房直接销毁再部署一台，很方便，另外使用我的<a href="https://www.vultr.com/?ref=8096009-4F" target="_blank" rel="noopener">Vultr推广链接</a>注册新用户充值任意金额可赠送50美元。</li>
-</ul>
-<p>以上几个官网可能会被墙，可能无法访问，如果没有梯子，可以看这里的<a href="https://github.com/Alvin9999/new-pac/wiki/ss%E5%85%8D%E8%B4%B9%E8%B4%A6%E5%8F%B7" target="_blank" rel="noopener">ss免费账号</a></p>
-<h3 id="Vultr的一些基本配置"><a href="#Vultr的一些基本配置" class="headerlink" title="Vultr的一些基本配置"></a>Vultr的一些基本配置</h3><h5 id="服务器部署"><a href="#服务器部署" class="headerlink" title="服务器部署"></a>服务器部署</h5><p>根据自己的需要选择部署一台服务器，如果是用来科学上网，选择一个地点，最便宜的方案就行了，不用担心流量不够用，就算真的不够用，销毁了再建一个就是了。这里选择的方案是：</p>
-<blockquote>
-<p>Server Location: Tokyo</p>
-<p>Server Type: CentOS 7 x64</p>
-<p>Server Size: 25GB SSD / 1CPU / 1024MB Memory / 1TB Bandwidth （$5/每月）</p>
-</blockquote>
-<p>选择好后等待安装完成，安装完成后会有一个IP，Ping下这个IP，延迟再可接受范围内即可。我经反复的创建部署，终于分配到一个延迟120ms的IP。有人说Tokyo的IP都不行，到了晚上丢包严重，但是我这个IP用到今天一直很稳定很快。反正不行就销毁重来。延迟只是反映了在当前网络环境下的情况，可以在网上搜下VPS测试的脚本，全方面测试下VPS。</p>
-<h5 id="修改ssh端口"><a href="#修改ssh端口" class="headerlink" title="修改ssh端口"></a>修改ssh端口</h5><p>这个最好改下，防止暴力扫描。</p>
-<ol>
-<li>编辑 <strong>/etc/ssh/sshd_config</strong> 文件，找到注释的<code>#Port 22</code>，在下面一行添加<code>Port 22222</code>，这个表示ssh端口使用<em>22222</em>，ssh端口是支持多端口的，如果取消上面<code>#Port 22</code>注释，则表示<em>22</em>端口和<em>22222</em>端口同时可用。这个端口自己定义，不要使用1-1024，最好5000以后。</li>
-<li>使用命令<code>systemctl restart sshd.service</code>重启ssh服务</li>
-<li>防火墙添加允许端口：<ul>
-<li><code>firewall-cmd --zone=public --add-port=22222/tcp --permanent</code>，永久开放22222端口；</li>
-<li><code>firewall-cmd --reload</code>，重新加载防火墙；</li>
-<li><code>firewall-cmd --zone=public --list-ports</code>，查看当前开放的端口</li>
+<li><p>以下是官方页面给出的运行镜像命令，<password>** 即ss密码，<strong><server-port></server-port></strong>即ss服务端口，tcp和upd设置成一样的即可，<strong>-d</strong> 表示后台运行。</password></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -e PASSWORD=&lt;password&gt; -p &lt;server-port&gt;:8388 -p &lt;server-port&gt;:8388/udp -d shadowsocks/shadowsocks-libev</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看<a href="https://hub.docker.com/r/shadowsocks/shadowsocks-libev/dockerfile" target="_blank" rel="noopener">官方的Dockerfile</a>可以知道镜像运行时的一些默认配置，可以根据自己需要在<code>run</code>的时候设置ss；例如下面的运行镜像命令表示ss的密码为<em>sspwd</em>，加密方法为<em>aes-256-gcm</em>，端口为<em>13579</em></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name ss -d -e PASSWORD=sspwd -e METHOD=aes-256-gcm -p 13579:8388 -p 13579:8388/udp shadowsocks/shadowsocks-libev</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 </li>
+<li><p>Shadowsocks服务端已经可以使用，根据配置客户端连接即可。</p>
+</li>
 </ol>
-<p>注意以上是在Vultr的初始化默认CentOS 7环境下，其他环境略有差别。</p>
-<h5 id="修改root密码-禁用root账户"><a href="#修改root密码-禁用root账户" class="headerlink" title="修改root密码/禁用root账户"></a>修改root密码/禁用root账户</h5><p>这个不一定要改，要改的话网上搜下把。</p>
-<p>至此一台VPS就准备好了，可以在上面做一些科学的事情了。</p>
+<h3 id="Docker搭建V2Ray服务"><a href="#Docker搭建V2Ray服务" class="headerlink" title="Docker搭建V2Ray服务"></a>Docker搭建V2Ray服务</h3><ol>
+<li><p><a href="https://hub.docker.com" target="_blank" rel="noopener">hub.docker.com</a>，搜索V2Ray，这里同样选择<a href="https://hub.docker.com/r/v2ray/official" target="_blank" rel="noopener">官方镜像</a>，这里的说明就有点少的可怜了。详细说明可以看<a href="https://www.v2ray.com" target="_blank" rel="noopener">官方文档</a>。</p>
+</li>
+<li><p>下载镜像：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull v2ray/official</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>启动服务</p>
+<p>这个官方的镜像页面啥说明也没有，V2Ray的核心配置就是<strong>config.json</strong>文件，只要能配置这个文件即可。根据<a href="https://hub.docker.com/r/v2ray/official/dockerfile" target="_blank" rel="noopener">V2Ray的Dockerfile</a>，可以看见有<code>COPY config.json /etc/v2ray/config.json</code>命令，可以根据此来放置<em>config.json</em>。还有一种修改<em>config.json</em>的方式就是使用Docker的<code>exec</code>命令进入容器进行修改，改完记得重启容器。以下是默认的<em>config.json</em>文件内容：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"log"</span> : &#123;</span><br><span class="line">    <span class="attr">"access"</span>: <span class="string">"/var/log/v2ray/access.log"</span>,</span><br><span class="line">    <span class="attr">"error"</span>: <span class="string">"/var/log/v2ray/error.log"</span>,</span><br><span class="line">    <span class="attr">"loglevel"</span>: <span class="string">"warning"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">"inbounds"</span>: [&#123;</span><br><span class="line">    <span class="attr">"port"</span>: <span class="number">8001</span>,</span><br><span class="line">    <span class="attr">"protocol"</span>: <span class="string">"vmess"</span>,</span><br><span class="line">    <span class="attr">"settings"</span>: &#123;</span><br><span class="line">      <span class="attr">"clients"</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">"id"</span>: <span class="string">"60ca58e9-003e-4c01-98de-c2223ae49153"</span>,</span><br><span class="line">          <span class="attr">"level"</span>: <span class="number">1</span>,</span><br><span class="line">          <span class="attr">"alterId"</span>: <span class="number">64</span></span><br><span class="line">        &#125;</span><br><span class="line">      ]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;],</span><br><span class="line">  <span class="attr">"outbounds"</span>: [&#123;</span><br><span class="line">    <span class="attr">"protocol"</span>: <span class="string">"freedom"</span>,</span><br><span class="line">    <span class="attr">"settings"</span>: &#123;&#125;</span><br><span class="line">  &#125;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>一般来说，对于服务端的V2Ray，此默认配置就可以。所以直接使用以下命令运行镜像：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name v2ray -d -p 24680:8001 -p 24680:8001/udp v2ray/official</span><br></pre></td></tr></table></figure>
+
+<p>以上命令表示V2Ray的端口为<em>24680</em></p>
+</li>
+<li><p>然后根据服务的<em>config.json</em>配置客户端的<em>config.json</em>，注意客户端配置的服务器端口不是容器中的端口，而是容器映射到宿主的端口，即<strong>24680</strong></p>
+</li>
+</ol>
+<h3 id="Shadowsocks与V2Ray简单比较"><a href="#Shadowsocks与V2Ray简单比较" class="headerlink" title="Shadowsocks与V2Ray简单比较"></a>Shadowsocks与V2Ray简单比较</h3><p>Shadowsocks功能单一，配置简单，上手容易。</p>
+<p>V2Ray配置复杂，但其复杂带来的更多强大的功能，多入口多出口，可定制路由，多协议支持，反向代理等。</p>
+<p>Shadowsocks就是一个简单的代理工具，加密与服务器通信。</p>
+<p>V2Ray更像一个节点，接受上一个节点的输入（inbounds），然后根据配置向下一个节点输出（outbounds）。</p>
 
       
     </div>
@@ -458,9 +472,13 @@
       
         <div class="post-tags">
           
+            <a href="/tags/Docker/" rel="tag"># Docker</a>
+          
             <a href="/tags/科学上网/" rel="tag"># 科学上网</a>
           
-            <a href="/tags/VPS/" rel="tag"># VPS</a>
+            <a href="/tags/Shadowsocks/" rel="tag"># Shadowsocks</a>
+          
+            <a href="/tags/V2Ray/" rel="tag"># V2Ray</a>
           
         </div>
       
@@ -473,8 +491,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/4af858b7.html" rel="next" title="IDEA代码热更新">
-                <i class="fa fa-chevron-left"></i> IDEA代码热更新
+              <a href="/posts/7dd83663.html" rel="next" title="Docker简单安装配置">
+                <i class="fa fa-chevron-left"></i> Docker简单安装配置
               </a>
             
           </div>
@@ -482,10 +500,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/posts/7dd83663.html" rel="prev" title="Docker简单安装配置">
-                Docker简单安装配置 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -643,7 +657,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#国外VPS推荐"><span class="nav-number">1.</span> <span class="nav-text">国外VPS推荐</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Vultr的一些基本配置"><span class="nav-number">2.</span> <span class="nav-text">Vultr的一些基本配置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#服务器部署"><span class="nav-number">2.0.1.</span> <span class="nav-text">服务器部署</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#修改ssh端口"><span class="nav-number">2.0.2.</span> <span class="nav-text">修改ssh端口</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#修改root密码-禁用root账户"><span class="nav-number">2.0.3.</span> <span class="nav-text">修改root密码/禁用root账户</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#环境准备"><span class="nav-number">1.</span> <span class="nav-text">环境准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Docker搭建Shadowsocks服务"><span class="nav-number">2.</span> <span class="nav-text">Docker搭建Shadowsocks服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Docker搭建V2Ray服务"><span class="nav-number">3.</span> <span class="nav-text">Docker搭建V2Ray服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Shadowsocks与V2Ray简单比较"><span class="nav-number">4.</span> <span class="nav-text">Shadowsocks与V2Ray简单比较</span></a></li></ol></div>
             
 
           </div>
